@@ -1,0 +1,33 @@
+:root {
+  --navbar-height: 60px;
+
+  /*--main-background-color: #d3c4f1;*/
+  --main-background-color: #000000;
+  /*--navbar-background-color: #f2d4a9;*/
+  --navbar-background-color: #161616c6;
+  --landingpage-background-color: var(--main-background-color);
+  --landingpage-border-color: #bea3f5;
+  --landingpage-top-left-border-image: url("./assets/icons/border-flower.png");
+  --landingpage-top-right-border-image: url("./assets/icons/border-star.png");
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  /* cursor: url("./assets/icons/cursor-default.png"), auto; */
+  background-color: var(--main-background-color);
+  background-image: url("./assets/bg2.jpg");
+  background-repeat: no-repeat;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
