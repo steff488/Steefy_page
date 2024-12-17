@@ -5,11 +5,17 @@ function Navbar() {
   const [selectedSection, setSelectedSection] = useState(null);
 
   const handleSectionClick = (section) => {
-    setSelectedSection(section === selectedSection ? null : section);
+    setSelectedSection(section);
   };
 
   return (
     <nav className="navbar">
+      <h3
+        className={selectedSection === "home" ? "active" : ""}
+        onClick={() => handleSectionClick("home")}
+      >
+        Home
+      </h3>
       <h3
         className={selectedSection === "about" ? "active" : ""}
         onClick={() => handleSectionClick("about")}

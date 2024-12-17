@@ -3,6 +3,7 @@
   margin: 0 auto;
 }
 
+/* 
 ul li {
   display: inline;
   text-align: center;
@@ -16,7 +17,7 @@ a {
   text-decoration: none;
   color: #333;
 }
-/* 
+
 .two:hover ~ hr {
   margin-left: 25%;
 }
@@ -51,8 +52,13 @@ hr {
   height: var(--navbar-height);
   border-radius: 35px;
   /* box-shadow: 0px 5px 10px #daa3f3; */
-  box-shadow: 0px 5px 10px #e5e5e5;
-  background-color: var(--navbar-background-color);
+  /* background-color: var(--navbar-background-color); */
+  background: rgba(20, 15, 37, 0.85);
+  box-shadow: -10px 15px 25px -2px #c24498;
+  border-radius: 16px;
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: 1px solid rgba(20, 15, 37, 0.02);
 }
 
 .navbar h3 {
@@ -60,8 +66,8 @@ hr {
   cursor: pointer;
   position: relative;
   padding: 5px;
-  color: #e5e5e5;
-  text-shadow: 0px 0px 10px #e5e5e5;
+  color: var(--navbar-text-color);
+  text-shadow: 0px 0px 10px var(--navbar-selector-color);
   transition: color 0.3s ease;
 }
 
@@ -77,6 +83,7 @@ hr {
 }
 
 .navbar h3.active::after {
-  background-color: black;
+  background-color: var(--navbar-selector-color);
   height: 2px;
+  border-radius: 10px;
 }

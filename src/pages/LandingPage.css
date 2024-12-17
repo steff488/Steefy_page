@@ -1,172 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .landing-page-container {
   display: grid;
-  /*margin-top: calc(var(--navbar-height) - 20px);*/
-}
-
-.bow {
-  position: relative;
-  z-index: 3;
-  top: 60px;
-  justify-self: center;
-  filter: drop-shadow(0.5px 0 0 white) drop-shadow(0 0.5px 0 white)
-    drop-shadow(-0.5px 0 0 white) drop-shadow(0 -0.5px 0 white);
-}
-
-.outer {
-  position: relative;
-  border: none;
-}
-.outer i {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--landingpage-background-color);
-}
-.outer .top {
-  position: relative;
-  margin-top: -10px;
-  z-index: 1;
-}
-.outer .bottom {
-  background-image: var(--landingpage-top-left-border-image);
-  position: relative;
-  margin-top: -30px;
-  margin-bottom: -22px;
-  z-index: 1;
-}
-.outer .left {
-  background-image: var(--landingpage-top-left-border-image);
+  background-image: url("../assets/background-mesh2.png");
   background-repeat: no-repeat;
-  background-size: 80%;
-  position: relative;
-  float: left;
-  margin-left: -10px;
-  z-index: 3;
-}
-.outer .right {
-  background-image: var(--landingpage-top-right-border-image);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position-x: right;
-  position: relative;
-  float: right;
-  margin-right: -10px;
-  z-index: 3;
-}
-.outer .left.bottom {
-  background-image: var(--landingpage-top-right-border-image);
-  transform: rotate(30deg);
-  background-position-x: 5px;
-  background-position-y: 7px;
-}
-.outer .right.bottom {
-  background-image: var(--landingpage-top-left-border-image);
-  background-position-x: 7px;
-  background-position-y: 7px;
+  background-size: cover;
 }
 
-.inner {
-  position: relative;
-  padding: 15px;
-  border: 5px solid var(--landingpage-border-color);
-  background-color: var(--landingpage-border-color);
+.clip-circle {
+  clip-path: ellipse(48% 50% at 50% 50%);
 }
 
-.inner::before {
-  z-index: 2;
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  border-top: 3px solid var(--landingpage-border-color);
-  background-color: var(--landingpage-background-color);
+@media (max-width: 950px) {
+  .landing-page-container .flex {
+    flex-direction: column;
+  }
+  .landing-page-container .flex-1 {
+    max-width: 100%;
+  }
+  .landing-page-container .first {
+    background-position: top;
+    padding-top: 20%;
+    padding-left: 13%;
+    padding-right: 15%;
+    min-width: 700px;
+  }
+  .landing-page-container .second {
+    max-height: 100px;
+  }
+  .landing-page-container .third {
+    align-items: center;
+  }
 }
 
-.inner::after {
-  z-index: 2;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 10px;
-  height: 100%;
-  border-left: 3px solid var(--landingpage-border-color);
-  background-color: var(--landingpage-background-color);
-}
+.background-mesh {
+  --_mesh-gradient-blur: 100px;
+  --_mesh-gradient-blend-mode: normal;
 
-.inner-right-bottom::before {
-  z-index: 2;
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  border-bottom: 3px solid var(--landingpage-border-color);
-  background-color: var(--landingpage-background-color);
-}
-
-.inner-right-bottom::after {
-  content: "";
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  right: -10px;
-  left: auto;
-  width: 10px;
-  height: 100%;
-  border-right: 3px solid var(--landingpage-border-color);
-  background-color: var(--landingpage-background-color);
-}
-
-.inner .top {
-  margin-top: -20px;
-  background-color: var(--landingpage-background-color);
-  z-index: 0;
-}
-.inner .bottom {
-  margin-top: -20px;
-  background-color: var(--landingpage-background-color);
-  z-index: 0;
-}
-.inner .left {
-  float: left;
-  margin-left: -30px;
-  background-color: var(--landingpage-border-color);
-  z-index: 0;
-}
-.inner .bottom-left {
-  float: left;
-  margin-left: -20px;
-  background-color: var(--landingpage-border-color);
-  z-index: 0;
-}
-.inner .right {
-  float: right;
-  margin-right: -30px;
-  background-color: var(--landingpage-border-color);
-  z-index: 0;
-}
-.inner .bottom-right {
-  float: right;
-  margin-right: -20px;
-  background-color: var(--landingpage-border-color);
-  z-index: 0;
-}
-
-.content {
-  padding: 20px;
-  background-color: var(--main-background-color);
-}
-
-.chain {
-  position: absolute;
-  top: -2%;
-  left: -15px;
-  width: 105%;
-  height: 105%;
-  object-fit: cover;
+  background: radial-gradient(
+      at 54.67496054115063% 100%,
+      #6e2c7d 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 96.30818737523782% 58.06001325267862%,
+      #452b91 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+        at 1.504815427738091% 0.48848621635173545%,
+        #621e4e 0px,
+        transparent 50%
+      )
+      #140f25;
+  mix-blend-mode: var(--_mesh-gradient-blend-mode);
+  filter: blur(var(--_mesh-gradient-blur));
 }

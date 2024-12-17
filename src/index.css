@@ -1,10 +1,15 @@
-:root {
-  --navbar-height: 60px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  /*--main-background-color: #d3c4f1;*/
+:root {
   --main-background-color: #000000;
-  /*--navbar-background-color: #f2d4a9;*/
+
   --navbar-background-color: #161616c6;
+  --navbar-height: 60px;
+  --navbar-selector-color: #c24498;
+  --navbar-text-color: #ffecff;
+
   --landingpage-background-color: var(--main-background-color);
   --landingpage-border-color: #bea3f5;
   --landingpage-top-left-border-image: url("./assets/icons/border-flower.png");
@@ -13,12 +18,9 @@
 
 body {
   margin: 0;
-  padding: 20px;
-  overflow: hidden;
-  /* cursor: url("./assets/icons/cursor-default.png"), auto; */
+  padding: 0;
+
   background-color: var(--main-background-color);
-  background-image: url("./assets/bg2.jpg");
-  background-repeat: no-repeat;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

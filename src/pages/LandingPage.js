@@ -1,109 +1,66 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./LandingPage.css";
 import Navbar from "../components/navbarComponent/Navbar.js";
-import borderBow from "../assets/icons/bow.png";
 
-import chain52 from "../assets/52.png";
-import chain60 from "../assets/60.png";
-import chain66 from "../assets/66c.png";
-import chain69 from "../assets/69.png";
-
-import bg from "../assets/bg2.jpg";
+import steefy_pic from "../assets/steefy2.png";
 
 function LandingPage() {
-  useEffect(() => {
-    const parallax = (e) => {
-      document.querySelectorAll(".layer").forEach((layer) => {
-        const speed = layer.getAttribute("data-speed");
-        const x = (window.innerWidth - e.pageX * speed) / 100;
-        const y = (window.innerHeight - e.pageY * speed) / 100;
-
-        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-      });
-
-      const backgroundSpeed = 10;
-      const backgroundX = (e.pageX / window.innerWidth) * backgroundSpeed;
-      const backgroundY = (e.pageY / window.innerHeight) * backgroundSpeed;
-
-      document.body.style.backgroundPosition = `${backgroundX}% ${backgroundY}%`;
-    };
-    document.addEventListener("mousemove", parallax);
-
-    return () => {
-      document.removeEventListener("mousemove", parallax);
-    };
-  }, []);
-
   return (
     <>
       <div className="landing-page-container">
         <Navbar />
-        <img
-          src={chain60}
-          data-speed="7"
-          className="chain layer"
-          style={{
-            top: "30px",
-            filter: "brightness(40%)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            top: "20%",
-            right: "50px",
-            color: "#e5e5e5",
-            textAlign: "center",
-          }}
-          className="layer"
-          data-speed="4"
-        >
-          <h2
-            style={{
-              fontSize: "270px",
-              fontFamily: "Audiowide",
-              margin: "-40px",
-              textShadow: "15px 15px 25px rgba(0, 0, 0, 0.8)",
-            }}
-          >
-            Chains
-          </h2>
-          <h2
-            style={{
-              fontSize: "70px",
-              fontFamily: "Expletus Sans",
-              marginTop: "-70px",
-              paddingLeft: "150px",
-              textShadow: "15px 15px 25px rgba(0, 0, 0, 0.8)",
-            }}
-          >
-            Omg so many chains...
-          </h2>
+        <div className="flex justify-between pl-[10%] pr-[10%] pt-[5%] min-h-screen">
+          {/* Left Column */}
+          <div className="first flex-1 max-w-[60%] text-white font-[Baumans] bg-frame bg-contain bg-no-repeat bg-start pt-[12%] pl-[8%] pr-[10%] text-justify ">
+            <h1 className="text-5xl font-bold mb-6">Hi there!</h1>
+            <p className="text-[120%] mb-3">
+              I'm an aspiring web developer who loves to sprinkle a bit of my
+              personality into every project I create.
+            </p>
+            <p className="text-[120%] mb-3">
+              I’m also a bit of a detail fanatic - super organized, with an eye
+              for the small things that make a big difference.
+            </p>
+            <p className="text-[120%] mb-3">
+              I’m creative, love problem-solving, and prefer learning by doing,
+              which means I'm always ready to dive into new challenges and get
+              hands-on!
+            </p>
+          </div>
+
+          {/* Middle Empty Column */}
+          <div className="second flex-1 max-w-[10%]"></div>
+
+          {/* Right Column */}
+          <div className="third flex-1 max-w-[30%] flex relative pt-[12%]">
+            <div
+              className="absolute w-72 h-72 bg-[#ffecff] rounded-full shadow-mainShadow outline outline-2 outline-[#c24498] overflow-visible"
+              style={{ boxSizing: "content-box" }}
+            >
+              <img
+                src={steefy_pic}
+                alt="Steefy"
+                style={{
+                  filter: "drop-shadow(0px 0px 10px rgba(95, 40, 78, 0.7))",
+                }}
+                className="absolute bottom-[-2px] left-[-21px] max-w-96 h-96 clip-circle"
+              />
+              <div style={{ marginTop: "250px" }}>
+                <svg width="100%" height="100%">
+                  <ellipse
+                    cx="50%"
+                    cy="50%"
+                    rx="90"
+                    ry="10"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
-        <img
-          src={chain66}
-          data-speed="2"
-          className="chain layer"
-          style={{
-            filter: "brightness(75%)",
-          }}
-        />
-        {/* <img src={borderBow} className="bow" alt="decorative bow" />
-    <div className="outer">
-      <i className="top left"></i>
-      <i className="top right"></i>
-      <div className="inner">
-        <div className="inner-right-bottom">
-          <i className="top left" style={{ backgroundImage: "none" }}></i>
-          <i className="top right" style={{ backgroundImage: "none" }}></i>
-          <div className="content">{""}</div>
-          <i className="bottom bottom-right"></i>
-          <i className="bottom bottom-left"></i>
-        </div>
-      </div>
-      <i className="bottom right"></i>
-      <i className="bottom left"></i>
-    </div> */}
       </div>
     </>
   );
