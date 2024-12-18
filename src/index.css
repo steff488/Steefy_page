@@ -5,15 +5,29 @@
 :root {
   --main-background-color: #000000;
 
-  --navbar-background-color: #161616c6;
-  --navbar-height: 60px;
-  --navbar-selector-color: #c24498;
+  --navbar-background-color: #140f25af;
+  --navbar-height: 70px;
+  /* --navbar-selector-color: #c24498; */
+  --navbar-text-shadow: #00fcfc;
+  /* --navbar-text-shadow-active: #c24498; */
+  --navbar-text-shadow-active: #ff31ba;
   --navbar-text-color: #ffecff;
+  --main-text-color: #ffecff;
 
   --landingpage-background-color: var(--main-background-color);
   --landingpage-border-color: #bea3f5;
   --landingpage-top-left-border-image: url("./assets/icons/border-flower.png");
   --landingpage-top-right-border-image: url("./assets/icons/border-star.png");
+
+  --holo-color-15: rgba(0, 252, 252, 0.15);
+  --holo-color-35: rgba(0, 252, 252, 0.35);
+  --holo-color-50: rgba(0, 252, 252, 0.5);
+  --holo-color-75: rgba(0, 252, 252, 0.75);
+  --holo-color-85: rgba(0, 252, 252, 0.85);
+  --holo-color-95: rgba(0, 252, 252, 0.95);
+  --holo-color-100: rgba(0, 252, 252, 1);
+  --width: 150px;
+  --height: 5px;
 }
 
 body {

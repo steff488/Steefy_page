@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
+import navbarFrame from "../../assets/navbar-frame.png";
+
 function Navbar() {
   const [selectedSection, setSelectedSection] = useState(null);
 
@@ -9,7 +11,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar clip-navbar-frame text-[1.15vw]">
+      <img src={navbarFrame} className="absolute w-[100%] h-[100%]" />
       <h3
         className={selectedSection === "home" ? "active" : ""}
         onClick={() => handleSectionClick("home")}

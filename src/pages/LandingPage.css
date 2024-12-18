@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .landing-page-container {
-  display: grid;
+  height: 100dvh;
   background-image: url("../assets/background-mesh2.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,6 +11,16 @@
 
 .clip-circle {
   clip-path: ellipse(48% 50% at 50% 50%);
+}
+
+.first h1,
+.first p {
+  color: var(--main-text-color);
+  text-shadow: -5px 5px 3px #161616c6;
+}
+
+.third {
+  justify-content: center;
 }
 
 @media (max-width: 950px) {
@@ -32,6 +42,9 @@
   }
   .landing-page-container .third {
     align-items: center;
+  }
+  .landing-page-container .third .try {
+    margin-top: 400px;
   }
 }
 
@@ -57,4 +70,79 @@
       #140f25;
   mix-blend-mode: var(--_mesh-gradient-blend-mode);
   filter: blur(var(--_mesh-gradient-blur));
+}
+
+.holo {
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 350px;
+  z-index: 2;
+
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--holo-color-35);
+  border-radius: 100%;
+  filter: blur(2.5px);
+  transform: perspective(80px) rotateX(-30deg);
+  transform-style: preserve-3d;
+  animation: holographic 5s infinite alternate;
+  backface-visibility: hidden;
+  animation-timing-function: ease-in-out;
+
+  &:after {
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    content: "";
+    height: 10px;
+    background-color: var(--holo-color-50);
+    border-radius: 100%;
+    filter: blur(2.5px);
+  }
+
+  + .holo {
+    animation-duration: 0.75s;
+    opacity: 0.5;
+  }
+}
+
+@keyframes holographic {
+  from {
+    will-change: box-shadow;
+    box-shadow: 0 -75px 5px var(--holo-color-15),
+      0 -1px 2px var(--holo-color-50), 0 -45px 5px var(--holo-color-15),
+      0 -2px 3px var(--holo-color-50), 0 -3px 4px var(--holo-color-50),
+      0 -4px 6px var(--holo-color-50), 0 -5px 10px var(--holo-color-75),
+      0 -7px 20px var(--holo-color-75), 0 -10px 30px var(--holo-color-75),
+      0 -15px 40px var(--holo-color-75), 0 -25px 50px var(--holo-color-75),
+      0 -35px 60px var(--holo-color-85), 0 -45px 70px var(--holo-color-95),
+      0 -65px 80px var(--holo-color-100), 0 -75px 90px var(--holo-color-100);
+  }
+  to {
+    will-change: unset;
+    box-shadow: 0 -25px 5px var(--holo-color-15),
+      0 -1px 2px var(--holo-color-50), 0 -15px 5px var(--holo-color-15),
+      0 -2px 3px var(--holo-color-50), 0 -3px 4px var(--holo-color-50),
+      0 -4px 6px var(--holo-color-50), 0 -5px 7px var(--holo-color-75),
+      0 -7px 10px var(--holo-color-75), 0 -10px 15px var(--holo-color-75),
+      0 -15px 20px var(--holo-color-75), 0 -25px 25px var(--holo-color-75),
+      0 -35px 30px var(--holo-color-85), 0 -45px 35px var(--holo-color-95),
+      0 -65px 40px var(--holo-color-100), 0 -75px 50px var(--holo-color-100);
+  }
+}
+
+.steefy-container {
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-25px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
