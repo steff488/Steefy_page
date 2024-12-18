@@ -16,8 +16,6 @@
 
   --landingpage-background-color: var(--main-background-color);
   --landingpage-border-color: #bea3f5;
-  --landingpage-top-left-border-image: url("./assets/icons/border-flower.png");
-  --landingpage-top-right-border-image: url("./assets/icons/border-star.png");
 
   --holo-color-15: rgba(0, 252, 252, 0.15);
   --holo-color-35: rgba(0, 252, 252, 0.35);
