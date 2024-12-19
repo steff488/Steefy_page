@@ -4,7 +4,7 @@
 
 .landing-page-container {
   height: 100dvh;
-  background-image: url("../assets/background-mesh-noise.png");
+  background-image: url("../../assets/background-mesh-noise.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./LandingPage.css";
-import Navbar from "../components/navbarComponent/Navbar.js";
+import Navbar from "../../components/navbarComponent/Navbar.js";
 
-import steefy_pic from "../assets/steefy2.png";
+import steefy_pic from "../../assets/steefy2.png";
 
 function LandingPage() {
   useEffect(() => {

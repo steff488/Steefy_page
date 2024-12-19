@@ -1,4 +1,4 @@
-import LandingPage from "./pages/LandingPage.js";
+import LandingPage from "./pages/LandingPage/LandingPage.js";
 import { ThemeProvider } from "./contexts/ThemeContext.js";
 import ThemeSwitcher from "./ThemeSwitcher.js";
 
