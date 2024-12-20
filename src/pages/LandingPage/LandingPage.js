@@ -36,7 +36,7 @@ function LandingPage() {
       <div className="h-[100svh] bg-mesh-noise bg-no-repeat bg-cover overflow-hidden">
         <Navbar />
         {/* Columns container */}
-        <div className="h-[100svh] flex flex-col lg:flex-row justify-between pl-[10%] pr-[10%] pt-[15%] lg:pt-[calc(var(--navbar-height)+60px)] overflow-hidden overflow-y-scroll lg:overflow-hidden">
+        <div className="h-[100svh] flex flex-col lg:flex-row justify-between pl-[10%] pr-[10%] pt-[calc(var(--navbar-height)+60px)] overflow-hidden overflow-y-scroll lg:overflow-hidden">
           {/* Left Column */}
           <div className="layer max-h-fit lg:max-h-[100%] lg:max-w-[55%] shadow-mainDropShadow flex-1 text-white font-[Baumans] lg:bg-frame lg:bg-contain lg:bg-no-repeat lg:bg-start lg:bg-top lg:bg-opacity-25 lg:pt-[9.5%] lg:pl-[7%] lg:pr-[9%] text-justify box-borders">
             <h1 className="md:text-[3.3vw] lg:text-[2.3vw] font-bold mb-6 text-shadow">
@@ -59,7 +59,7 @@ function LandingPage() {
           <div className="justify-center flex-1 lg:max-w-[35%] md:h-auto flex relative pt-[20%] lg:pt-[8%]">
             {/* Steefy pic container (pink background) */}
             <div
-              className="animate-floatUpDown absolute w-[50%] lg:w-[70%] aspect-square bg-[#ffecff] rounded-full shadow-mainBoxShadow outline outline-3 outline-[#c24498] overflow-visible"
+              className="lg:animate-floatUpDown absolute w-[50%] lg:w-[70%] aspect-square bg-[#ffecff] rounded-full shadow-mainBoxShadow outline outline-3 outline-[#c24498] overflow-visible"
               style={{ boxSizing: "content-box" }}
             >
               {/* Steefy pic */}
@@ -72,7 +72,7 @@ function LandingPage() {
                 className="[clip-path:ellipse(50%_50%_at_50%_50%)] absolute bottom-0 left-[2px]"
               />
             </div>
-            <div className="holo m-auto mt-[65%] lg:mt-[87%] w-[23%] lg:w-[30%] h-[5px]"></div>
+            <div className="invisible lg:visible holo m-auto mt-[65%] lg:mt-[87%] w-[23%] lg:w-[30%] h-[5px]"></div>
           </div>
         </div>
       </div>
