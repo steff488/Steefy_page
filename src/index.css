@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 :root {
+  --primary-light: #ffecff;
   --primary-pink: #ff31ba;
+  --secondary-pink: #c24498;
+  --primary-blue: #00fcfc;
   --main-background-color: #000000;
 
   --navbar-background-color: #140f25af;
-  --navbar-height: 70px;
+  --navbar-height: 75px;
   /* --navbar-selector-color: #c24498; */
   --navbar-text-shadow: #00fcfc;
   /* --navbar-text-shadow-active: #c24498; */

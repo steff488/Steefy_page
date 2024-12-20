@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+
+import "./Navbar.css";
 
 import navbarCircle from "../../assets/navbar-circle2.png";
 import navbarFrame from "../../assets/navbar-frame.png";
@@ -12,47 +15,80 @@ const navLinks = [
   { to: "/contact", label: "Contact" },
 ];
 
+const NavLinks = () => {
+  return (
+    <>
+      {navLinks.map(({ to, label }) => (
+        <h3
+          key={to}
+          className="relative font-audiowide text-[var(--navbar-text-color)] text-shadow-nav transition-all duration-300 cursor-pointer"
+        >
+          <NavLink
+            to={to}
+            className={({ isActive }) =>
+              isActive
+                ? `text-shadow-navActive bg-no-repeat bg-center bg-cover p-[5px]`
+                : "p-[5px]"
+            }
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundImage: `url(${navbarCircle})`,
+                    backgroundSize: "100% 100%",
+                    backgroundPosition: "center",
+                    display: "block",
+                  }
+                : {}
+            }
+          >
+            {label}
+          </NavLink>
+        </h3>
+      ))}
+    </>
+  );
+};
+
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       {/* Navbar */}
-      <nav
-        className="absolute navbar-frame z-10 flex justify-center items-center gap-[5%] top-[20px] mx-[15%] w-[70%] h-[var(--navbar-height)] backdrop-blur-[5px] bg-[var(--navbar-background-color)] bg-opacity-80 border border-[--navbar-background-color] py-[10px] text-[110%] lg:text-[initial]"
-        style={{
-          clipPath:
-            "polygon(0.22% 15.3%, 2% 2%, 30.9% 2%, 32.09% 9.48%, 65.8% 9.48%, 66.1% 12.1%, 98.2% 12.1%, 99.79% 25%, 99.79% 25%, 99.79% 84.8%, 98.05% 98.05%, 69.1% 98.05%, 67.95% 90.5%, 34.2% 90.5%, 33.9% 87.9%, 1.8% 87.9%, 0.22% 75.4%)",
-        }}
-      >
+      <nav className="md:absolute z-10 flex flex-row justify-end md:justify-center items-center md:gap-[5%] top-0 m-0 w-[100svw] lg:top-[20px] lg:mx-[15%] lg:w-[70%] min-h-[var(--navbar-height)] backdrop-blur-[5px] bg-[var(--navbar-background-color)] bg-opacity-80 border-b-2 border-b-[var(--primary-blue)] lg:border lg:border-[--navbar-background-color] px-[10px] md:px-0 py-[20px] md:py-[10px] text-[110%] lg:text-[initial] lg:clip-navbar">
         {/* Navbar frame */}
-        <img src={navbarFrame} className="absolute w-[100%] h-[100%] mx-auto" />
+        <img
+          src={navbarFrame}
+          className="invisible lg:visible absolute w-[100%] h-[100%] mx-auto"
+        />
         {/* Navbar buttons */}
-        {navLinks.map(({ to, label }) => (
-          <h3
-            key={to}
-            className="relative font-audiowide text-[var(--navbar-text-color)] text-shadow-nav transition-all duration-300 cursor-pointer"
-          >
-            <NavLink
-              to={to}
-              className={({ isActive }) =>
-                isActive
-                  ? `text-shadow-navActive bg-no-repeat bg-center bg-cover p-[5px]`
-                  : "p-[5px]"
-              }
-              style={({ isActive }) =>
-                isActive
-                  ? {
-                      backgroundImage: `url(${navbarCircle})`,
-                      backgroundSize: "100% 100%",
-                      backgroundPosition: "center",
-                      display: "block",
-                    }
-                  : {}
-              }
-            >
-              {label}
-            </NavLink>
-          </h3>
-        ))}
+        <div className="hidden md:contents">
+          <NavLinks />
+        </div>
+
+        {isOpen && (
+          <>
+            <div className="min-w-[10%]" content=""></div>
+            <div className="min-w-[80%] self-center z-10 flex basis-full flex-col gap-[10px] items-center">
+              <NavLinks />
+            </div>
+          </>
+        )}
+
+        <button
+          className={`${isOpen ? "self-start" : ""}  min-w-[10%] md:hidden`}
+          onClick={toggleNavbar}
+        >
+          {isOpen ? (
+            <X className="text-[var(--primary-blue)] justify-self-center" />
+          ) : (
+            <Menu className="text-[var(--primary-blue)] justify-self-center" />
+          )}
+        </button>
       </nav>
     </>
   );
