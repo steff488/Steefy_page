@@ -60,10 +60,11 @@ function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="sticky md:absolute z-10 flex flex-row justify-between md:justify-center items-center md:gap-[5%] top-0 m-0 w-[100svw] lg:top-[20px] lg:mx-[15%] lg:w-[70%] min-h-[var(--navbar-height)] backdrop-blur-[5px] bg-[var(--navbar-background-color-transparent)] md:bg-[var(--navbar-background-color)] bg-opacity-80 border-b-2 border-b-[var(--primary-blue)] lg:border lg:border-[--navbar-background-color] px-[10px] md:px-0 py-[20px] md:py-[10px] text-[110%] lg:text-[initial] lg:clip-navbar">
+      <nav className="sticky md:absolute z-10 flex flex-row justify-between md:justify-center items-center md:gap-[5%] top-0 m-0 w-[100svw] lg:top-[20px] lg:mx-[15%] lg:w-[70%] min-h-[var(--navbar-height)] backdrop-blur-[5px] bg-[var(--navbar-background-color-transparent)] md:bg-[var(--navbar-background-color)] bg-opacity-80 border-b-2 border-b-[var(--primary-blue)] lg:border lg:border-[--navbar-background-color] px-[10px] md:px-0 py-[10px] text-[110%] lg:text-[initial] lg:clip-navbar">
         {/* Logo */}
         <Link to="/">
           <img
+            alt="navbar-frame"
             src={logo}
             className={`${
               isOpen ? "hidden" : ""
@@ -72,6 +73,7 @@ function Navbar() {
         </Link>
         {/* Navbar frame */}
         <img
+          alt="navbar-frame"
           src={navbarFrame}
           className="invisible lg:visible absolute w-[100%] h-[100%] mx-auto"
         />
@@ -85,6 +87,7 @@ function Navbar() {
             <div className="min-w-[10%] self-start pr-[10px]">
               <Link to="/">
                 <img
+                  alt="logo"
                   src={logo}
                   className="block aspect-square cursor-pointer"
                 />

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+
+.custom-hover-bg:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 49, 186, 1) 2%,
+    rgba(194, 68, 152, 0.5) 2%,
+    rgba(194, 68, 152, 0.5) 98%,
+    rgba(255, 49, 186, 1) 98%
+  );
+}

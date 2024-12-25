@@ -39,6 +39,7 @@ function LandingPage() {
       <div className="h-[100svh] bg-mesh-noise bg-no-repeat bg-cover overflow-hidden overflow-y-scroll lg:overflow-auto">
         <Link to="/">
           <img
+            alt="logo"
             src={logo}
             className="hidden lg:block absolute left-[5%] top-[25px] h-[calc(var(--navbar-height)-15px)] cursor-pointer"
           />
@@ -47,7 +48,7 @@ function LandingPage() {
         {/* Columns container */}
         <div className="h-[100svh] flex flex-col lg:flex-row justify-between pl-[10%] pr-[10%] py-[60px] md:pt-[calc(var(--navbar-height)+60px)]">
           {/* Left Column */}
-          <div className="lg:layer max-h-fit lg:max-h-[100%] lg:max-w-[55%] shadow-mainDropShadow flex-1 text-white font-[Baumans] lg:bg-frame lg:bg-contain lg:bg-no-repeat lg:bg-start lg:bg-top lg:bg-opacity-25 lg:pt-[9.5%] lg:pl-[7%] lg:pr-[9%] text-justify box-borders">
+          <div className="layer max-h-fit lg:max-h-[100%] lg:max-w-[55%] shadow-mainDropShadow flex-1 text-white font-[Baumans] lg:bg-frame lg:bg-contain lg:bg-no-repeat lg:bg-start lg:bg-top lg:bg-opacity-25 lg:pt-[9.5%] lg:pl-[7%] lg:pr-[9%] text-justify box-borders">
             <h1 className="md:text-[3.3vw] lg:text-[2.3vw] font-bold mb-6 text-shadow">
               Hi there!
             </h1>

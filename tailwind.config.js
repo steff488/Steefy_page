@@ -1,4 +1,5 @@
 /**@type {import('tailwindcss').Config} */
+const { height } = require("@fortawesome/free-solid-svg-icons/fa0");
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
@@ -23,6 +24,7 @@ module.exports = {
       },
       boxShadow: {
         mainBoxShadow: "-10px 15px 30px -2px  #c24498",
+        barGlow: "0px 0px 10px 5px #ff31ba",
       },
       dropShadow: {
         mainDropShadow: "-10px 15px 30px -2px  #c24498",
@@ -30,6 +32,8 @@ module.exports = {
       animation: {
         floatUpDown: "floatUpDown 10s ease-in-out infinite",
         holographic: "holographic 5s infinite alternate",
+        textFade: "textFade 2s infinite",
+        fadeIn: "fadeIn 0.1s forwards",
       },
       keyframes: {
         floatUpDown: {
@@ -44,6 +48,21 @@ module.exports = {
         clipPath: {
           navbar:
             "polygon(0.22% 15.3%, 2% 2%, 30.9% 2%, 32.09% 9.48%, 65.8% 9.48%, 66.1% 12.1%, 98.2% 12.1%, 99.79% 25%, 99.79% 84.8%, 98.05% 98.05%, 69.1% 98.05%, 67.95% 90.5%, 34.2% 90.5%, 33.9% 87.9%, 1.8% 87.9%, 0.22% 75.4%)",
+        },
+        textFade: {
+          "0%": { opacity: "0" },
+          "8%": { opacity: "1" },
+          "20%": { opacity: "0" },
+          "30%": { opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "8%": { opacity: "1" },
+          "15%": { opacity: "1" },
+          "30%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },
