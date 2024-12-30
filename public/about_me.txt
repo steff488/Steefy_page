@@ -20,13 +20,28 @@ Editing pictures in paint
 
 
 -Education
-2021-2024:
+2017 - 2021:
+Mathematics and Computer Science
+National College "Gheorghe Lazar" - Sibiu, Romania
+2021 - 2024:
 Mathematics and Computer Science in English
 Faculty of Mathematics and Informatics BBU - Cluj-Napoca, Romania
-2024-2026:
+2024 - 2026:
 Software Engineering in English
 Faculty of Mathematics and Informatics BBU - Cluj-Napoca, Romania
 
--Soft Skills
-Hobbies:
-painting, rollerskating, playing video games
+
+-Skills
+Hard Skills:
+C++
+15
+Java
+15
+React
+10
+Tailwind
+8
+Nigga
+20
+Muie
+20

@@ -60,7 +60,7 @@ function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="sticky md:absolute z-10 flex flex-row justify-between md:justify-center items-center md:gap-[5%] top-0 m-0 w-[100svw] lg:top-[20px] lg:mx-[15%] lg:w-[70%] min-h-[var(--navbar-height)] backdrop-blur-[5px] bg-[var(--navbar-background-color-transparent)] md:bg-[var(--navbar-background-color)] bg-opacity-80 border-b-2 border-b-[var(--primary-blue)] lg:border lg:border-[--navbar-background-color] px-[10px] md:px-0 py-[10px] text-[110%] lg:text-[initial] lg:clip-navbar">
+      <nav className="sticky md:absolute z-20 flex flex-row justify-between md:justify-center items-center md:gap-[5%] top-0 m-0 w-[100svw] lg:top-[20px] lg:mx-[15%] lg:w-[70%] min-h-[var(--navbar-height)] backdrop-blur-[50px] lg:backdrop-blur-[5px] bg-[var(--navbar-background-color-transparent)] md:bg-[var(--navbar-background-color)] bg-opacity-80 border-b-2 border-b-[var(--primary-blue)] lg:border lg:border-[--navbar-background-color] px-[10px] md:px-0 py-[10px] text-[110%] lg:text-[initial] lg:clip-navbar">
         {/* Logo */}
         <Link to="/">
           <img
@@ -93,7 +93,7 @@ function Navbar() {
                 />
               </Link>
             </div>
-            <div className="min-w-[80%] self-center z-10 flex basis-full flex-col gap-[10px] items-center">
+            <div className="min-w-[80%] self-center z-20 flex basis-full flex-col gap-[10px] items-center">
               <NavLinks />
             </div>
           </>

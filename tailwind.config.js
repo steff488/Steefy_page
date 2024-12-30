@@ -34,6 +34,8 @@ module.exports = {
         holographic: "holographic 5s infinite alternate",
         textFade: "textFade 2s infinite",
         fadeIn: "fadeIn 0.1s forwards",
+        dashUp: "dashUp 5s linear infinite",
+        clipMouth: "clipMouth 1s linear infinite alternate",
       },
       keyframes: {
         floatUpDown: {
@@ -64,6 +66,22 @@ module.exports = {
           "30%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        dashUp: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "0 -197px" },
+        },
+        clipMouth: {
+          "0%": {
+            clipPath: "polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 50% 50%)",
+          },
+          "100%": {
+            clipPath:
+              "polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 100%)",
+          },
+        },
+      },
+      transitionProperty: {
+        height: "height",
       },
     },
   },

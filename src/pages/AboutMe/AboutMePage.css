@@ -14,12 +14,58 @@
   }
 }
 
-.custom-hover-bg:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 49, 186, 1) 2%,
-    rgba(194, 68, 152, 0.5) 2%,
-    rgba(194, 68, 152, 0.5) 98%,
-    rgba(255, 49, 186, 1) 98%
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Circle color */
+  border: 2px solid var(--primary-purple); /* Optional border */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.1s ease-out, background-color 0.2s ease;
+}
+
+.custom-right {
+  right: calc(100% + 20px);
+}
+
+.dashed-line {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--secondary-purple) 0,
+    var(--secondary-purple) 10px,
+    rgba(255, 255, 255, 0) 5px,
+    rgba(255, 255, 255, 0) 25px
   );
+}
+
+.dot {
+  animation: 0.32s clip-mouth linear infinite alternate;
+}
+
+@keyframes clip-mouth {
+  0% {
+    clip-path: polygon(
+      0 100%,
+      0 0,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      50% 50%,
+      0 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0 100%,
+      0 0,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      50% 50%,
+      50% 100%
+    );
+  }
 }

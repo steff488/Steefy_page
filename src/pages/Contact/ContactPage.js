@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./ContactPage.css";
-import Navbar from "../../components/navbarComponent/Navbar.js";
+import Navbar from "../../components/NavbarComponent/Navbar.js";
 
 import logo from "../../assets/logo2.png";
 
@@ -18,10 +18,31 @@ function ContactPage() {
           />
         </Link>
         <Navbar />
-        <p>Contact!</p>
+        {/* Personal Information Section */}
+        <div className="overflow-hidden snap-end md:snap-center h-[calc(100svh-var(--navbar-height))] md:h-[100svh] pt-[50px] pb-[20px] md:pt-[calc(var(--navbar-height)+50px)] lg:pt-[calc(var(--navbar-height)+70px)]">
+          {/* Content container */}
+          <div className="w-[90%] lg:w-[70%] justify-self-center h-[calc(100svh-var(--navbar-height)-110px)] lg:h-[calc(100svh-var(--navbar-height)-140px)] text-[var(--primary-light)] bg-[#ffffff12]">
+            {/* {createDivElement("React", 10)} */}
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
 export default ContactPage;
+
+/* <div className="bg-black h-[100svh]">
+<iframe
+        className="justify-self-center"
+        src="https://my.mail.ru/video/embed/7356037161268806772"
+        width="626"
+        height="367"
+        frameBorder="0"
+        scrolling="no"
+        allow="fullscreen"
+        webkitAllowFullScreen
+        mozAllowFullScreen
+        allowFullScreen
+      ></iframe>
+</div> */

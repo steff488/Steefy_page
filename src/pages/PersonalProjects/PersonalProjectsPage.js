@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./PersonalProjectsPage.css";
-import Navbar from "../../components/navbarComponent/Navbar.js";
+import Navbar from "../../components/NavbarComponent/Navbar.js";
 
 import logo from "../../assets/logo2.png";
 

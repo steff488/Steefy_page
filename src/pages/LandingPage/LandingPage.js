@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./LandingPage.css";
-import Navbar from "../../components/navbarComponent/Navbar.js";
+import Navbar from "../../components/NavbarComponent/Navbar.js";
 
 import steefy_pic from "../../assets/steefy2.png";
 import logo from "../../assets/logo2.png";

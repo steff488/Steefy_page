@@ -7,6 +7,8 @@
   --primary-pink: #ff31ba;
   --secondary-pink: #c24498;
   --primary-blue: #00fcfc;
+  --primary-purple: #aa60f5;
+  --secondary-purple: #8a4fc6;
   --main-background-color: #000000;
 
   --navbar-background-color: #140f25af;
@@ -45,8 +47,4 @@ html,
 body {
   overflow: hidden;
   height: 100%;
-}
-
-.bar {
-  transition: height 0.8s;
 }
